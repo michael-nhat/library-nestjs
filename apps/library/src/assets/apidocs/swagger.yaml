@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Sample API
+  title: Library DDD
   description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
   version: 0.1.9
 servers:
@@ -22,3 +22,21 @@ paths:
                 type: array
                 items: 
                   type: string
+  /pets/{petId}:
+    get:
+      summary: Info for a specific pet
+      operationId: showPetById
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          description: The id of the pet to retrieve
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "./components/schemas/Pet.yaml"
