@@ -2,6 +2,7 @@
     - Run project
     - understand how it process event
     - Find and understand hard definition
+    - fix controller don't run
 # Todo:
     - insert 10 books and 4 patrons 
     - change a small rule to see result
