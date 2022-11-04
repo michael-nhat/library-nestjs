@@ -19,41 +19,10 @@
       "/book": {
         "$ref": "./book/book.block.docs.json"
       },
-      "/patrols/{petId}": {
-        "get": {
-          "tags": [
-            "patrol"
-          ],
-          "summary": "Info for a specific pet",
-          "operationId": "showPetById",
-          "parameters": [
-            {
-              "name": "petId",
-              "in": "path",
-              "required": true,
-              "description": "The id of the pet to retrieve",
-              "schema": {
-                "type": "string"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Expected response to a valid request",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+      "/patrols/{petId}":
+      {
+        "$ref": "./patrol/patrol.docs.json"
+      } 
     },
     "components": {
       "schemas": {

@@ -46,7 +46,6 @@
                                 "type": "string"
                             },
                             "bookType": {
-                                "title": "wtf",
                                 "$ref": "./wtf.docs.json"
                             }
                         }
