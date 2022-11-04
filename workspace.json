@@ -2,10 +2,12 @@
   "version": 2,
   "projects": {
     "catalogue": "libs/catalogue",
+    "cattalog": "libs/cattalog",
     "lending-application": "libs/lending/application",
     "lending-domain": "libs/lending/domain",
     "lending-infrastructure": "libs/lending/infrastructure",
     "lending-ui-rest": "libs/lending/ui-rest",
+    "lennd": "libs/lennd",
     "library": "apps/library",
     "shared-domain": "libs/shared/domain",
     "shared-infrastructure-nestjs-cqrs-events": "libs/shared/infrastructure-nestjs-cqrs-events"
