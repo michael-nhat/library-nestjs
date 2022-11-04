@@ -18,6 +18,8 @@ export class BookController {
 
   @Post()
   async create(@Body() createBookDto: CreateBookDto): Promise<Result> {
+    console.log(createBookDto);
+    
     await this.catalogue.addBook(
       createBookDto.author,
       createBookDto.title,
