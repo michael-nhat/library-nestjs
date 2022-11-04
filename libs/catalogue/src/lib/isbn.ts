@@ -2,7 +2,8 @@ import { ensure, isString, matches, TinyTypeOf } from 'tiny-types';
 
 export class ISBN extends TinyTypeOf<string>() {
   private static readonly VERY_SIMPLE_ISBN_CHECK = new RegExp(
-    '^\\d{9}[\\d|X]$'
+    // '^\\d{9}[\\d|X]$'
+    '\\d{1,9}'
   );
 
   constructor(isbn: string) {
