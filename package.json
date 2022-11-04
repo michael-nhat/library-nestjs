@@ -7,7 +7,7 @@
         "start": "nx serve",
         "build": "nx build",
         "test": "nx test",
-        "docs": "swagger-ui-watcher ./apidocs/swagger-main.json -p 3335 --no-open"
+        "docs": "swagger-ui-watcher ./apidocs/main.docs.json -p 3335 --no-open  > /dev/null 2>&1 &"
     },
     "private": true,
     "dependencies": {
