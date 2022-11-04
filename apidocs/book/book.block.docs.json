@@ -31,22 +31,28 @@
         "requestBody": {
             "description": "Update an existent pet in the store",
             "content": {
-                "multipart/form-data": {
+                "application/json": {
                     "schema": {
                         "title": "Update book dto",
                         "type": "object",
                         "properties": {
                             "author": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "Nhat Composer"
                             },
                             "title": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "The best of Nhat"
                             },
                             "isbn": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "1008"
                             },
                             "bookType": {
-                                "$ref": "./wtf.docs.json"
+                                "$ref": "./BookType.enum.docs.json"
                             }
                         }
                     }

@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.3",
     "info": {
-      "title": "SuperLibrary DDD",
-      "description": "Swagger is super awesome, super fucking awesome tool to write api wtf hahah hihi",
+      "title": "Library app develop with DDD",
+      "description": "Library app under development",
       "version": "0.1.9"
     },
     "servers": [
