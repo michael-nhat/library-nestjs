@@ -30,7 +30,7 @@ export class BookRepo
 
   async findById(id: BookId): Promise<Option<Book>> {
     return pipe(
-      option.fromNullable(await this.bookRepo.findOne(id.value)),
+      option.fromNullable(await this.bookRepo.findOneBy({ bookId: id.value})),
       option.map((book) => book.toDomainModel())
     );
   }

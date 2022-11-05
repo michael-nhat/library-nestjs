@@ -16,7 +16,9 @@ export class CatalogueDatabase {
     private readonly bookInstanceRepository: Repository<BookInstance>
   ) {}
   async findBookByIsbn(isbn: ISBN): Promise<Option<Book>> {
-    return fromNullable(await this.bookRepository.findOne(isbn.value));
+    return fromNullable(
+      await this.bookRepository.findOneBy({isbn: isbn.value})
+    );
   }
   async saveNewBook(book: Book): Promise<Book> {
     await this.bookRepository.insert(book);

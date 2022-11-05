@@ -54,7 +54,7 @@ export class PatronRepo implements PatronRepository {
   }
 
   async findById(id: PatronId): Promise<Option<Patron>> {
-    const patron = await this.typeormRepo.findOne(id.value);
+    const patron = await this.typeormRepo.findOneBy({ id: id.value });
     return pipe(
       option.fromNullable(patron),
       option.map((patron) => this.domainModelMapper.map(patron))
@@ -62,7 +62,10 @@ export class PatronRepo implements PatronRepository {
   }
 
   private async handleNextEvent(event: PatronEvent): Promise<Patron> {
-    let entity = await this.typeormRepo.findOneOrFail(event.patronId.value);
+    let entity = await this.typeormRepo.findOneByOrFail({
+      id: '442',
+      
+    });
     entity = entity.handle(event);
     await this.typeormRepo.save(entity);
     return this.domainModelMapper.map(entity);

@@ -28,7 +28,10 @@ export class Catalogue {
       map((book) => book.toAnInstance(bookType)),
       map(this.saveAndPublishEvents.bind(this)),
       map(() => Result.Success),
-      getOrElse<Result>(() => Result.Rejection)
+      getOrElse<Result>(() => {
+        console.log('match here');
+        return Result.Rejection;
+      })
     );
   }
 

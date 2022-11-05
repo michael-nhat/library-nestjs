@@ -1,5 +1,5 @@
 import { ensure, isString, Predicate, TinyTypeOf } from 'tiny-types';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { BookInstance } from './book-instance';
 import { BookType } from './book-type';
 import { ISBN } from './isbn';
@@ -38,7 +38,7 @@ export class Book {
       from: (value: string) => new Author(value),
     },
   })
-  private author!: Author;
+  author!: Author;
 
   @Column({
     primary: true,
@@ -50,7 +50,7 @@ export class Book {
       from: (value: string) => new ISBN(value),
     },
   })
-  private isbn!: ISBN;
+  isbn!: ISBN;
 
   @Column({
     type: 'varchar',
@@ -60,7 +60,7 @@ export class Book {
       from: (value: string) => new Title(value),
     },
   })
-  private title!: Title;
+  title!: Title;
   static create(isbn: string, author: string, title: string): Book {
     const book = new Book();
     book.isbn = new ISBN(isbn);
