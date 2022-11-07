@@ -7,19 +7,26 @@ import {
   Patch,
   Param,
   Delete,
+  Inject,
 } from '@nestjs/common';
 import { Catalogue } from './catalogue';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
+import { TagModel } from '../../../../apps/library/src/app/models/tag.model';
+import { Injectable } from '@nestjs/common';
+
 
 @Controller('book')
+@Injectable()
 export class BookController {
-  constructor(private readonly catalogue: Catalogue) {}
+  constructor(private readonly catalogue: Catalogue, @Inject(TagModel) private readonly tagModel: typeof TagModel) {}
+
+
 
   @Post()
   async create(@Body() createBookDto: CreateBookDto): Promise<Result> {
     console.log(createBookDto);
-    
+
     await this.catalogue.addBook(
       createBookDto.author,
       createBookDto.title,
@@ -33,6 +40,7 @@ export class BookController {
 
   @Get()
   findAll() {
+    return this.tagModel.query().select('*');
     return this.catalogue.findAll();
   }
 
