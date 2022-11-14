@@ -5,10 +5,11 @@ import { AppCoreModule } from './app-core.module';
 import { DbModule } from './db.module';
 
 @Module({
-  imports: [AppCoreModule, CatalogueModule,
+  imports: [
+    AppCoreModule,
+    CatalogueModule,
     LendingUiRestModule,
     DbModule
-
   ],
 })
 export class AppModule {}
