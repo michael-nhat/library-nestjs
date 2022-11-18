@@ -10,6 +10,7 @@
     "lennd": "libs/lennd",
     "library": "apps/library",
     "shared-domain": "libs/shared/domain",
+    "shared-doomain": "libs/shared/doomain",
     "shared-infrastructure-nestjs-cqrs-events": "libs/shared/infrastructure-nestjs-cqrs-events"
   }
 }

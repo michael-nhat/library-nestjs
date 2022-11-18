@@ -1,0 +1,33 @@
+{
+  "root": "libs/shared/doomain",
+  "sourceRoot": "libs/shared/doomain/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/doomain",
+        "main": "libs/shared/doomain/src/index.ts",
+        "tsConfig": "libs/shared/doomain/tsconfig.lib.json",
+        "assets": ["libs/shared/doomain/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/doomain/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/doomain"],
+      "options": {
+        "jestConfig": "libs/shared/doomain/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
