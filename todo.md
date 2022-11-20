@@ -6,8 +6,7 @@
 # Todo:
     - migrate to OjbectionJS
       due to stupid TypeOrm setup
-      The example is complex and it event don't work
-      fuck the author
+      The example of author is complex and it event don't work
       - gen 2 module
       - add objectionJS make it success
       - restructure same as old module
