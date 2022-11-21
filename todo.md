@@ -7,8 +7,9 @@
     - init domain model  
     - gen 2 module
 # Todo:
-      
-      - Init book, book instance, catalouge (Arg root)
+      - why author stupidly put the catalogue I don't need the stupid catalog!
+      - Init book, book db migrate, model, usecase CRUD
+      - Init event modelling
       Setup infastructure runable:
       - setup objection for crud model
       The example of author is complex and it event don't work
