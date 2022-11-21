@@ -5,12 +5,13 @@
     - fix controller don't run
     - migrate to OjbectionJS
     - init domain model  
+    - gen 2 module
 # Todo:
+      
       - Init book, book instance, catalouge (Arg root)
       Setup infastructure runable:
       - setup objection for crud model
       The example of author is complex and it event don't work
-      - gen 2 module
       - add objectionJS make it success
       - restructure same as old module
       - reinit ideal, research objectionjs, tinytype

@@ -1,5 +1,5 @@
 import { Uuid } from '@library/shared/domain';
-import { LengthMaxStringP, NotEmptyStringP, Year } from '@library/shared/doomain';
+import { LengthMaxStringP, NotEmptyStringP, Year, NatureCount } from '@library/shared/doomain';
 import { ensure, isString, matches, TinyTypeOf, Predicate, isNumber } from 'tiny-types';
 
 export class BookId extends Uuid {
@@ -61,5 +61,8 @@ export class Book {
   name: BookName;
   author: PeoleName;
   year: Year;
+  availableQuantity: NatureCount;
+  total: NatureCount;
+  lost: NatureCount;
 }
 
