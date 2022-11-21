@@ -7,7 +7,7 @@ module.exports = {
   // connection: process.env.DATABASE_URL,
   connection: {
     // filename: "./example.sqlite",
-    database:  'libbrary',
+    database:  'lib1',
     // userName: 'postgres',
     password: 'postgres',
     user: 'postgres',
