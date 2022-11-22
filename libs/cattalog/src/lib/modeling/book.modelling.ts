@@ -55,7 +55,7 @@ export class PeoleName extends TinyTypeOf<string>() {
 }
 
 export class Book {
-  id: BookId;
+  id: Uuid;
   isbn: ISBN;
   category: Category;
   name: BookName;
@@ -65,4 +65,3 @@ export class Book {
   total: NatureCount;
   lost: NatureCount;
 }
-
