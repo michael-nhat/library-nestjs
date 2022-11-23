@@ -25,7 +25,8 @@ export async function up(knex: Knex) {
   });
 
   await knex.schema.table('book_instance', (t) => {
-    t.foreign('book_id').references('id').inTable('book');
+    t.foreign('book_id').references('id').inTable('book')
+    .onDelete('CASCADE').onUpdate('CASCADE');
   });
 }
 

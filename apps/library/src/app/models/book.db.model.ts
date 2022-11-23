@@ -1,6 +1,6 @@
-import { BookInstance } from 'libs/catalogue/src/lib/book-instance';
 import { Model } from 'objection';
 import { BaseModel } from './base.model';
+import { BookInstanceModel } from './book-instance.db.model';
 
 export class BookModel extends BaseModel{
   static tableName = 'book';
@@ -17,7 +17,7 @@ export class BookModel extends BaseModel{
   static RelationMappings = {
     owner: {
       relation: Model.HasManyRelation,
-      modelClass: BookInstance,
+      modelClass: BookInstanceModel,
       join: {
         from: 'book.id',
         to: 'book_instance.book_id'

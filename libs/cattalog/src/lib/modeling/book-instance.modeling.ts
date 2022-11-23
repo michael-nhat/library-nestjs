@@ -1,7 +1,7 @@
 import { Uuid } from "@library/shared/doomain"
 import { Book } from './book.modelling';
+import { BookStatus } from './BookStatus.type';
 
-export type BookStatus = "achived" | "activated" | "pending"
 
 export class BookInstance{
   id: Uuid;
