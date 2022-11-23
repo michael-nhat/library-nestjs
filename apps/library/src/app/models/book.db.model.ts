@@ -8,8 +8,8 @@ export class BookModel extends BaseModel{
   name: string;
   isbn: string;
   category: string;
-  author: string;
-  years: number;
+  author?: string;
+  years?: number;
   available_quantity: number;
   total: number;
   lost; number;
