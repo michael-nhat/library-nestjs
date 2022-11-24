@@ -6,9 +6,9 @@
     - migrate to OjbectionJS
     - init domain model  
     - gen 2 module
+    - seed need write at classical when insert relation, expect nothing more than it work (consider snonik)
+    - why author stupidly put the catalogue I don't need the stupid catalog!
 # Todo:
-      - seed need write at classical when insert relation, expect nothing more than it work (fuck it, consider snonik)
-      - why author stupidly put the catalogue I don't need the stupid catalog!
       - Init book, book db migrate, model, usecase CRUD
       - Init event modelling
       Setup infastructure runable:
