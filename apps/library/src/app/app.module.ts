@@ -12,7 +12,7 @@ import { SlonikModule} from 'nestjs-slonik';
     LendingUiRestModule,
     DbModule,
     SlonikModule.forRoot({
-      connectionUri: 'postgres://postgres@postgres@localhost/lib2',
+      connectionUri: 'postgres://postgres:postgres@localhost/lib2',
     })
   ],
 })
