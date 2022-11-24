@@ -2,7 +2,6 @@ import { Model } from 'objection';
 import { BaseModel } from './base.model';
 import { BookStatus } from '../../../../../libs/cattalog/src/lib/modeling/BookStatus.type';
 import { BookModel } from './book.db.model';
-import { number } from 'fp-ts-std';
 
 export class BookInstanceModel extends BaseModel {
   static tableName = 'book_instance';

@@ -15,7 +15,7 @@
    "mig:uup": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts migrate:down ",
     "seed": "npm run knex seed:run",
     "seed:make": "npm run knex seed:make -- -x ts",
-    "seed:single": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts seed:run -- --verbose --specific",
+    "seed:single": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts seed:run --verbose --specific",
     "db:reset": "node reset-db.js"
   },
   "private": true,

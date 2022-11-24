@@ -6,19 +6,19 @@ export async function seed(knex: Knex): Promise<any> {
   await BookInstanceModel.query(knex).insert([
     {
       status: 'activated',
-      book_id: 2,
+      book_id: 51,
     },
     {
       status: 'activated',
-      book_id: 1,
+      book_id: 51,
     },
     {
       status: 'activated',
-      book_id: 1,
+      book_id: 51,
     },
     {
       status: 'activated',
-      book_id: 2,
+      book_id: 51,
     },
   ]);
 }
