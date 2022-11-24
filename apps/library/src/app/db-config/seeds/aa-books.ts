@@ -3,6 +3,7 @@ import { BookModel } from '../../models/book.db.model';
 
 export async function seed(knex: Knex): Promise<any> {
   await BookModel.query(knex).del();
+  await knex.raw(`ALTER SEQUENCE ${BookModel.tableName}_id_seq RESTART WITH 1`);
   await BookModel.query(knex).insert([
     {
       name: 'Workout',
