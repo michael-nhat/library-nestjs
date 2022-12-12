@@ -38,6 +38,7 @@
     "slonik": "^33.0.4",
     "slonik-utilities": "^2.0.1",
     "swagger-ui-express": "^4.6.0",
+    "swagger-ui-watcher": "^2.1.13",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
