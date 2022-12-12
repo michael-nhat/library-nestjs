@@ -1,5 +1,5 @@
 import { Knex } from 'knex';
-import { BookModel } from '../../models/book.db.model';
+import { BookModel } from '../models/book.db.model';
 
 export async function seed(knex: Knex): Promise<any> {
   await BookModel.query(knex).del();
