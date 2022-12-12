@@ -1,0 +1,122 @@
+{
+    "get": {
+        "tags": [
+            "book"
+        ],
+        "summary": "Returns a list of book.",
+        "description": "",
+        "responses": {
+            "200": {
+                "description": "A JSON array of user book",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "post": {
+        "tags": [
+            "book"
+        ],
+        "summary": "Returns a list of users.",
+        "description": "Optional extended description in CommonMark or HTML.",
+        "operationId": "updatePet",
+        "requestBody": {
+            "description": "Update an existent pet in the store",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "title": "Update book dto",
+                        "type": "object",
+                        "properties": {
+                            "author": {
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "Nhat Composer"
+                            },
+                            "title": {
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "The best of Nhat"
+                            },
+                            "isbn": {
+                                "type": "string",
+                                "minLength": 1,
+                                "example": "1008"
+                            },
+                            "bookType": {
+                                "$ref": "./BookType.enum.docs.json"
+                            }
+                        }
+                    }
+                }
+            },
+            "required": true
+        },
+        "responses": {
+            "200": {
+                "description": "A JSON array of user names",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "patch": {
+        "tags": [
+            "book"
+        ],
+        "summary": "Returns a list of users.",
+        "description": "Optional extended description in CommonMark or HTML.",
+        "requestBody": {
+            "content": {
+                "multipart/form-data": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "orderId": {
+                                "type": "integer"
+                            },
+                            "userId": {
+                                "type": "integer"
+                            },
+                            "fileName": {
+                                "type": "string",
+                                "format": "binary"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200": {
+                "description": "A JSON array of user names",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

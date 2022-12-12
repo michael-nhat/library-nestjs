@@ -5,7 +5,19 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "nx": "nx",
+    "ip": "npm i --legacy-peer-deps",
+    "docs": "swagger-ui-watcher ./apidocs/main.docs.json -p 3335 --no-open > /dev/null 2>&1 &",
+    "knex": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts",
+    "mig": "npm run knex migrate:latest",
+    "mig:make": "npm run knex migrate:make -- -x ts",
+    "mig:up": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts migrate:up -- ",
+    "mig:uup": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts migrate:down ",
+    "seed": "npm run knex seed:run",
+    "seed:make": "npm run knex seed:make -- -x ts",
+    "seed:single": "ts-node --project ./apps/library/src/app/db-config/tsconfig.json ./node_modules/.bin/knex --knexfile ./apps/library/src/app/db-config/knexfile.ts seed:run --verbose --specific",
+    "db:reset": "node ./etc/reset-db.js"
   },
   "private": true,
   "dependencies": {
@@ -14,6 +26,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
+    "swagger-ui-express": "^4.6.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

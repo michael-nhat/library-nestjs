@@ -1,0 +1,8 @@
+{
+    "type": "string",
+    "enum": [
+        "Circulating",
+        "Restricted"
+    ],
+    "default": "Circulating"
+}
