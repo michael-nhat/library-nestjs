@@ -22,6 +22,7 @@
   "private": true,
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@willsoto/nestjs-objection": "^8.1.0",
@@ -29,6 +30,7 @@
     "io-ts": "^2.2.20",
     "knex": "^2.3.0",
     "nestjs-slonik": "^9.0.0",
+    "objection": "^3.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.6.0",
     "slonik": "^33.0.4",
