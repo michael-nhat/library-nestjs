@@ -1,8 +1,9 @@
 import { Model } from 'objection';
 import { BaseModel } from './base.model';
 // import { BookStatus } from '@library/cattalog/src/lib/modeling/BookStatus.type';
+import { BookStatus } from '@libws/catalogue';
 import { BookModel } from './book.db.model';
-export type BookStatus = "achived" | "activated" | "pending"
+// export type BookStatus = "achived" | "activated" | "pending"
 
 export class BookInstanceModel extends BaseModel {
   static tableName = 'book_instance';
