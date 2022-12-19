@@ -1,7 +1,7 @@
 #### Todo:
-    - Setup db
-    - create catalog modellling and model
+    - create catalog modellling and model (crud book)
 
 #### Done:
     - Init project with Nx
+    - Setup db
     - create catalog lib
