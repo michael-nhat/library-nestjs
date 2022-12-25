@@ -1,36 +1,29 @@
 {
-    "ts-node": {
-        "compilerOptions": {
-            "module": "commonjs",
-            "strictPropertyInitialization": false
-        }
-    },
-    "compileOnSave": false,
+  "ts-node": {
     "compilerOptions": {
-        "rootDir": ".",
-        "sourceMap": true,
-        "declaration": false,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "target": "es2015",
-        "module": "esnext",
-        "lib": [
-            "es2017",
-            "dom"
-        ],
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "baseUrl": ".",
-        "paths": {
-            "@libws/catalogue": [
-                "libs/catalogue/src/index.ts"
-            ]
-        }
-    },
-    "exclude": [
-        "node_modules",
-        "tmp"
-    ]
+      "module": "commonjs",
+      "strictPropertyInitialization": false
+    }
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lib/ambass": ["libs/ambass/src/index.ts"],
+      "@libws/catalogue": ["libs/catalogue/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
 }
